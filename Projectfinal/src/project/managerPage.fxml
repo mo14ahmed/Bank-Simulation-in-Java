@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.ManagerPageController">
+   <top>
+      <AnchorPane prefHeight="73.0" prefWidth="800.0" style="-fx-background-color: #021526;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="323.0" layoutY="19.0" text="Manager Page" textFill="#e2e2b6">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="481.0" prefWidth="400.0" style="-fx-background-color: #e2e2b6;" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="username" layoutX="133.0" layoutY="139.0" />
+            <TextField fx:id="password" layoutX="133.0" layoutY="190.0" />
+            <TextField fx:id="accNumber" layoutX="133.0" layoutY="238.0" />
+            <TextField fx:id="balance" layoutX="133.0" layoutY="285.0" />
+            <Button layoutX="151.0" layoutY="351.0" mnemonicParsing="false" onAction="#createCustomer" style="-fx-background-color: #021526;" text="Create Account" textFill="#e2e2b6" />
+            <Label layoutX="51.0" layoutY="143.0" text="Username" textFill="#021526" />
+            <Label layoutX="53.0" layoutY="194.0" text="Password" textFill="#021526" />
+            <Label layoutX="33.0" layoutY="242.0" text="Account Number" textFill="#021526" />
+            <Label layoutX="58.0" layoutY="289.0" text="Balance" />
+            <Label layoutX="37.0" layoutY="27.0" text="Create New Customer Account" textFill="#021526">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #e2e2b6;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="256.0" layoutY="350.0" mnemonicParsing="false" onAction="#delete" style="-fx-background-color: #021526;" text="Delete" textFill="#e2e2b6" />
+            <Button fx:id="display" layoutX="102.0" layoutY="350.0" mnemonicParsing="false" onAction="#displayAccounts" style="-fx-background-color: #021526;" text="Display Accounts" textFill="#e2e2b6" />
+            <TableView fx:id="table" layoutX="92.0" layoutY="82.0" prefHeight="218.0" prefWidth="233.0" style="-fx-background-color: #021526;">
+              <columns>
+                <TableColumn fx:id="usernameColumn" editable="false" prefWidth="111.20001220703125" sortable="false" text="Username" />
+                <TableColumn fx:id="accNumColumn" prefWidth="120.79997253417969" text="Account Number" />
+              </columns>
+            </TableView>
+            <Label layoutX="79.0" layoutY="27.0" text="Displaying All Customer " textFill="#021526">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Separator layoutX="-6.0" layoutY="10.0" orientation="VERTICAL" prefHeight="461.0" prefWidth="8.0" />
+         </children>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="45.0" prefWidth="800.0" style="-fx-background-color: #021526;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="373.0" layoutY="10.0" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: #e2e2b6;" text="Logout" textFill="#021526" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
